@@ -176,20 +176,23 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/theme/unnamed.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">关于</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 08, 2021</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2</span>
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/about/index.html" class="leancloud" data-flag-title="关于"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>82</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        
-
+        <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs gcode">ME：大三学生<br>专业：计算机科学与技术<span class="hljs-comment">(Python 方向)</span><br>态度：想给枯燥的代码生活，找点儿乐子<br>在实训期间搭建此博客，只是动手实践操作一下，如有侵权，立即删改<br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -221,6 +224,32 @@
     <div class="btn" id="comments-btn">查看评论</div>
   
   
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "FmkCmtE1kz2twaP91e5amhQP-gzGzoHsz",
+        app_key: "wCjp87qeDM8HgNfeHKRa3LqR",
+        placeholder: "王二丫",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
 </section>
       
     </section>
@@ -318,6 +347,43 @@
 <script src="/js/script.js"></script>
 
 
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'qnS6H8mNktdaQlVRKQ9Mau74-gzGzoHsz',
+      appKey: 'UmkVmLr33hShRX2nbmpYX8we',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud").each(async (e) => {
+        const url = $(".leancloud").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud").eq(e).text(count ? count : '--');
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud").length === 1 ? $(".leancloud").attr('id').trim() : 'http://example.com';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    $(function () {
+      const Counter = AV.Object.extend("Counter");
+      addCount(Counter);
+      showCount(Counter);
+    });
+
+  });
+</script>
 
 
 
