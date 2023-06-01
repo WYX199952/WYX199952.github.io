@@ -41,6 +41,7 @@ body {
     overflow-y: auto;
 }
 
+
 h1 {
     margin: 48px 0 22px -5px;
     font-size: 2.0rem;
@@ -550,10 +551,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/* .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+} */
 
 .bg-cover:before,
 .bg-cover:after {
