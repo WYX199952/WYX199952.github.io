@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>云暖小站</title>
+  <title>云袅小站</title>
   
   <subtitle>EXPLORING</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
@@ -56,7 +56,7 @@
     <link href="http://example.com/2021/01/19/hexo-theme-matery-jiao-cheng/"/>
     <id>http://example.com/2021/01/19/hexo-theme-matery-jiao-cheng/</id>
     <published>2021-01-19T03:35:24.478Z</published>
-    <updated>2023-05-30T06:49:41.701Z</updated>
+    <updated>2023-06-01T09:59:18.190Z</updated>
     
     
       
@@ -76,6 +76,8 @@ hexo-theme-matery note
     
     <content src="http://example.com/images/theme/1.png" type="image"/>
     
+    
+    <category term="hexo-theme-matery" scheme="http://example.com/categories/hexo-theme-matery/"/>
     
     
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
