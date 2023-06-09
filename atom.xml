@@ -6,7 +6,7 @@
   <link href="https://wyx199952.github.io/atom.xml" rel="self"/>
   
   <link href="https://wyx199952.github.io/"/>
-  <updated>2023-06-01T08:44:16.015Z</updated>
+  <updated>2023-06-09T03:23:59.858Z</updated>
   <id>https://wyx199952.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建遇到的问题</title>
+    <link href="https://wyx199952.github.io/2023/06/09/problems/"/>
+    <id>https://wyx199952.github.io/2023/06/09/problems/</id>
+    <published>2023-06-09T03:04:00.890Z</published>
+    <updated>2023-06-09T03:23:59.858Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;
+解决live2d看板娘和busuanzi不蒜子计数冲突
+&lt;/h1&gt;
+&lt;p&gt;如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。&lt;/p&gt;
+&lt;h2&gt;
+解决方法：
+&lt;/h2&gt;
+&lt;p&gt;打开 themes_partial</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="https://wyx199952.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="https://wyx199952.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="live2d" scheme="https://wyx199952.github.io/tags/live2d/"/>
+    
+    <category term="busuanzi" scheme="https://wyx199952.github.io/tags/busuanzi/"/>
+    
+    <category term="解决live2d看板娘和busuanzi不蒜子计数冲突" scheme="https://wyx199952.github.io/tags/%E8%A7%A3%E5%86%B3live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%92%8Cbusuanzi%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%86%B2%E7%AA%81/"/>
+    
+  </entry>
   
   <entry>
     <title>Data Structure</title>
@@ -91,7 +129,7 @@ hexo-theme-matery note
     <link href="https://wyx199952.github.io/2021/01/19/hello-hexo/"/>
     <id>https://wyx199952.github.io/2021/01/19/hello-hexo/</id>
     <published>2021-01-19T03:16:32.919Z</published>
-    <updated>2023-06-01T08:09:41.244Z</updated>
+    <updated>2023-06-09T03:25:27.301Z</updated>
     
     
       
@@ -104,6 +142,8 @@ hexo-theme-matery note
     
     
     
+    
+    <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>
     
   </entry>
   

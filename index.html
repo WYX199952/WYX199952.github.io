@@ -95,7 +95,14 @@
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
+<head>
+	<link rel="stylesheet" href="source\css\denglong.css">
+	<script>
+		// 网站主题切换模式开始
+		if (localStorage.getItem('themespring') === '1') { document.body.classList.add('themespring'); } else if (matchMedia('(prefers-color-scheme: themespring)').matches) { document.body.classList.add('themespring'); } function switchThemes() { var body = document.body; if(body.classList.contains('themespring')){ document.body.classList.remove('themespring'); localStorage.setItem('themespring','0'); return; } else { document.body.classList.add('themespring'); localStorage.setItem('themespring','1'); return; } }; // 网站主题切换模式结束
+		
+	</script>
+</head>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -906,6 +913,74 @@ _config.yml 的修改建议
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2023/06/09/problems/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="博客搭建遇到的问题">
+                            
+                            <span class="card-title">博客搭建遇到的问题</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+解决live2d看板娘和busuanzi不蒜子计数冲突
+
+如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。
+
+解决方法：
+
+打开 themes_partial 中的 post-d
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                            <span class="chip bg-color">博客搭建</span>
+                        </a>
+                        
+                        <a href="/tags/live2d/">
+                            <span class="chip bg-color">live2d</span>
+                        </a>
+                        
+                        <a href="/tags/busuanzi/">
+                            <span class="chip bg-color">busuanzi</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%A7%A3%E5%86%B3live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%92%8Cbusuanzi%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%86%B2%E7%AA%81/">
+                            <span class="chip bg-color">解决live2d看板娘和busuanzi不蒜子计数冲突</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2021/01/19/hello-hexo/">
                         <div class="card-image">
                             
@@ -935,6 +1010,14 @@ _config.yml 的修改建议
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -987,8 +1070,10 @@ _config.yml 的修改建议
             
         </div>
     </article>
-
+	
 </main>
+
+
 
 
 
@@ -1060,11 +1145,12 @@ _config.yml 的修改建议
             <a href="/about" target="_blank">王永欣</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+			
             
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.8k</span>
+                        class="white-color">3.5k</span>
             
             
             
@@ -1082,6 +1168,8 @@ _config.yml 的修改建议
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
+			
+			        
             <br>
 
             <!-- 运行天数提醒. -->
@@ -1180,9 +1268,14 @@ _config.yml 的修改建议
 
 </div>
     </div>
+	<div style="position:relative; bottom:120px left:auto; width:85%">
+		    <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=422428548&auto=1&height=66"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2053420961&auto=1&height=66"></iframe>
+	</div>
 </footer>
 
-<div class="progress-bar"></div>
+<div class="progress-bar">
+</div>
 
 
     <!-- 搜索遮罩框 -->
@@ -1391,7 +1484,23 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+	
+	
+	<!-- 春节主题 按钮 --> 
+	<a onclick="switchThemes()" id="switchspring"> 
+		<img class="chunjiepic" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png" title="节日模式"> 
+	</a> 
+	<!-- 春节主题 小挂件 --> 
+	<div class="caishendeng"> 
+		<div class="caishenxian"> 
+			<img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png"> 
+		</div> 
+	</div>
+	
+	
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+
 
 </html>

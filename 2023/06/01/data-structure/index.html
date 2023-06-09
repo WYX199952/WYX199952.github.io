@@ -65,7 +65,14 @@
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
+<head>
+	<link rel="stylesheet" href="source\css\denglong.css">
+	<script>
+		// 网站主题切换模式开始
+		if (localStorage.getItem('themespring') === '1') { document.body.classList.add('themespring'); } else if (matchMedia('(prefers-color-scheme: themespring)').matches) { document.body.classList.add('themespring'); } function switchThemes() { var body = document.body; if(body.classList.contains('themespring')){ document.body.classList.remove('themespring'); localStorage.setItem('themespring','0'); return; } else { document.body.classList.add('themespring'); localStorage.setItem('themespring','1'); return; } }; // 网站主题切换模式结束
+		
+	</script>
+</head>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -540,17 +547,23 @@
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
+                        <span id="busuanzi_container_site_pv" style='display:none'></span>
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv" ></span>
+                
+                
+
             </div>
         </div>
         <hr class="clearfix">
 
         
 
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
         
 
         <div class="card-content article-card-content">
@@ -714,18 +727,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/06/01/data-structure/">
+                <a href="/2023/06/09/problems/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Data Structure">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="博客搭建遇到的问题">
                         
-                        <span class="card-title">Data Structure</span>
+                        <span class="card-title">博客搭建遇到的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -735,35 +747,38 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
-                                    数据结构
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
                     </a>
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/live2d/">
+                        <span class="chip bg-color">live2d</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/busuanzi/">
+                        <span class="chip bg-color">busuanzi</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%A7%A3%E5%86%B3live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%92%8Cbusuanzi%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%86%B2%E7%AA%81/">
+                        <span class="chip bg-color">解决live2d看板娘和busuanzi不蒜子计数冲突</span>
                     </a>
                     
                 </div>
@@ -1044,11 +1059,12 @@
             <a href="/about" target="_blank">王永欣</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+			
             
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.8k</span>
+                        class="white-color">3.5k</span>
             
             
             
@@ -1066,6 +1082,8 @@
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
+			
+			        
             <br>
 
             <!-- 运行天数提醒. -->
@@ -1164,9 +1182,14 @@
 
 </div>
     </div>
+	<div style="position:relative; bottom:120px left:auto; width:85%">
+		    <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=422428548&auto=1&height=66"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2053420961&auto=1&height=66"></iframe>
+	</div>
 </footer>
 
-<div class="progress-bar"></div>
+<div class="progress-bar">
+</div>
 
 
     <!-- 搜索遮罩框 -->
@@ -1375,7 +1398,23 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+	
+	
+	<!-- 春节主题 按钮 --> 
+	<a onclick="switchThemes()" id="switchspring"> 
+		<img class="chunjiepic" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png" title="节日模式"> 
+	</a> 
+	<!-- 春节主题 小挂件 --> 
+	<div class="caishendeng"> 
+		<div class="caishenxian"> 
+			<img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png"> 
+		</div> 
+	</div>
+	
+	
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+
 
 </html>

@@ -58,7 +58,14 @@
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
+<head>
+	<link rel="stylesheet" href="source\css\denglong.css">
+	<script>
+		// 网站主题切换模式开始
+		if (localStorage.getItem('themespring') === '1') { document.body.classList.add('themespring'); } else if (matchMedia('(prefers-color-scheme: themespring)').matches) { document.body.classList.add('themespring'); } function switchThemes() { var body = document.body; if(body.classList.contains('themespring')){ document.body.classList.remove('themespring'); localStorage.setItem('themespring','0'); return; } else { document.body.classList.add('themespring'); localStorage.setItem('themespring','1'); return; } }; // 网站主题切换模式结束
+		
+	</script>
+</head>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -512,21 +519,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">4</a></span>
+    <span class="count"><a href="/">5</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">2</a></span>
+    <span class="count"><a href="/categories">3</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -542,21 +549,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">4</a></span>
+    <span class="count"><a href="/">5</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">2</a></span>
+    <span class="count"><a href="/categories">3</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">8</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -700,7 +707,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,1],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -742,7 +749,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"数据结构","value":1},{"name":"hexo-theme-matery","value":1}],
+                data: [{"name":"数据结构","value":1},{"name":"hexo-theme-matery","value":1},{"name":"博客搭建","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -766,7 +773,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["hexo","算法","C语言","数据结构","博客搭建"]
+                data: ["hexo","博客搭建","算法","C语言","数据结构","live2d","busuanzi","解决live2d看板娘和busuanzi不蒜子计数冲突"]
             }
         ],
         yAxis: [
@@ -779,7 +786,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,1,1,1,1],
+                data: [3,2,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -978,6 +985,24 @@
             </a>
             
             
+            
+            <a href="/tags/live2d/">
+                <span class="chip center-align waves-effect waves-light chip-default">live2d</span>
+            </a>
+            
+            
+            
+            <a href="/tags/busuanzi/">
+                <span class="chip center-align waves-effect waves-light chip-default">busuanzi</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%A7%A3%E5%86%B3live2d%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%92%8Cbusuanzi%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E5%86%B2%E7%AA%81/">
+                <span class="chip center-align waves-effect waves-light chip-default">解决live2d看板娘和busuanzi不蒜子计数冲突</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -1105,11 +1130,12 @@
             <a href="/about" target="_blank">王永欣</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+			
             
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.8k</span>
+                        class="white-color">3.5k</span>
             
             
             
@@ -1127,6 +1153,8 @@
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
+			
+			        
             <br>
 
             <!-- 运行天数提醒. -->
@@ -1225,9 +1253,14 @@
 
 </div>
     </div>
+	<div style="position:relative; bottom:120px left:auto; width:85%">
+		    <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=422428548&auto=1&height=66"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2053420961&auto=1&height=66"></iframe>
+	</div>
 </footer>
 
-<div class="progress-bar"></div>
+<div class="progress-bar">
+</div>
 
 
     <!-- 搜索遮罩框 -->
@@ -1436,7 +1469,23 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+	
+	
+	<!-- 春节主题 按钮 --> 
+	<a onclick="switchThemes()" id="switchspring"> 
+		<img class="chunjiepic" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png" title="节日模式"> 
+	</a> 
+	<!-- 春节主题 小挂件 --> 
+	<div class="caishendeng"> 
+		<div class="caishenxian"> 
+			<img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png"> 
+		</div> 
+	</div>
+	
+	
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+
 
 </html>

@@ -58,7 +58,14 @@
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-
+<head>
+	<link rel="stylesheet" href="source\css\denglong.css">
+	<script>
+		// 网站主题切换模式开始
+		if (localStorage.getItem('themespring') === '1') { document.body.classList.add('themespring'); } else if (matchMedia('(prefers-color-scheme: themespring)').matches) { document.body.classList.add('themespring'); } function switchThemes() { var body = document.body; if(body.classList.contains('themespring')){ document.body.classList.remove('themespring'); localStorage.setItem('themespring','0'); return; } else { document.body.classList.add('themespring'); localStorage.setItem('themespring','1'); return; } }; // 网站主题切换模式结束
+		
+	</script>
+</head>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -528,6 +535,15 @@
                 </a>
                 
                 
+                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="博客搭建: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">博客搭建
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
     </div>
@@ -673,11 +689,12 @@ _config.yml 的修改建议
             <a href="/about" target="_blank">王永欣</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+			
             
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.8k</span>
+                        class="white-color">3.5k</span>
             
             
             
@@ -695,6 +712,8 @@ _config.yml 的修改建议
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
+			
+			        
             <br>
 
             <!-- 运行天数提醒. -->
@@ -793,9 +812,14 @@ _config.yml 的修改建议
 
 </div>
     </div>
+	<div style="position:relative; bottom:120px left:auto; width:85%">
+		    <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=422428548&auto=1&height=66"></iframe> -->
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2053420961&auto=1&height=66"></iframe>
+	</div>
 </footer>
 
-<div class="progress-bar"></div>
+<div class="progress-bar">
+</div>
 
 
     <!-- 搜索遮罩框 -->
@@ -1004,7 +1028,23 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+	
+	
+	<!-- 春节主题 按钮 --> 
+	<a onclick="switchThemes()" id="switchspring"> 
+		<img class="chunjiepic" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png" title="节日模式"> 
+	</a> 
+	<!-- 春节主题 小挂件 --> 
+	<div class="caishendeng"> 
+		<div class="caishenxian"> 
+			<img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/caishen.png"> 
+		</div> 
+	</div>
+	
+	
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+
 
 </html>

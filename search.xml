@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>博客搭建遇到的问题</title>
+      <link href="/2023/06/09/problems/"/>
+      <url>/2023/06/09/problems/</url>
+      
+        <content type="html"><![CDATA[<h1>解决live2d看板娘和busuanzi不蒜子计数冲突</h1><p>如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。</p><h2>解决方法：</h2><p>打开 themes_partial 中的 post-detail.ejs，找到对应代码字段：</p><pre><code>&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.enable) { %&gt;&lt;div id="busuanzi_container_page_pv" class="info-break-policy"&gt;    &lt;i class="fa fa-eye fa-fw"&gt;&lt;/i&gt;&lt;%- __('readCount') %&gt;:&amp;nbsp;&amp;nbsp;    &lt;span id="busuanzi_value_page_pv" &gt;&lt;/span&gt;&lt;/div&gt;&lt;% } %&gt;</code></pre><p>修改为以下代码：</p><pre><code>&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.enable) { %&gt;    &lt;span id="busuanzi_container_site_pv" style='display:none'&gt;&lt;/span&gt;    &lt;i class="fa fa-eye fa-fw"&gt;&lt;/i&gt;&lt;%- __('readCount') %&gt;:&amp;nbsp;&amp;nbsp;    &lt;span id="busuanzi_value_page_pv" &gt;&lt;/span&gt;&lt;% } %&gt;</code></pre><p>打开.pure.mini.js，找到相应代码字段：</p><pre><code>var bszCaller, bszTag; !function () { var c, d, e, a = !1, b = []; ready = function (c) { return a || "interactive" === document.readyState || "complete" === document.readyState ? c.call(document) : b.push(function () { return c.call(this) }), this }, d = function () { for (var a = 0, c = b.length; c &gt; a; a++)b[a].apply(document); b = [] }, e = function () { a || (a = !0, d.call(window), document.removeEventListener ? document.removeEventListener("DOMContentLoaded", e, !1) : document.attachEvent &amp;&amp; (document.detachEvent("onreadystatechange", e), window == window.top &amp;&amp; (clearInterval(c), c = null))) }, document.addEventListener ? document.addEventListener("DOMContentLoaded", e, !1) : document.attachEvent &amp;&amp; (document.attachEvent("onreadystatechange", function () { /loaded|complete/.test(document.readyState) &amp;&amp; e() }), window == window.top &amp;&amp; (c = setInterval(function () { try { a || document.documentElement.doScroll("left") } catch (b) { return } e() }, 5))) }(), bszCaller = { fetch: function (a, b) { var c = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random()); window[c] = this.evalCall(b), a = a.replace("=BusuanziCallback", "=" + c), scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, document.getElementsByTagName("HEAD")[0].appendChild(scriptTag) }, evalCall: function (a) { return function (b) { ready(function () { try { a(b), scriptTag.parentElement.removeChild(scriptTag) } catch (c) { bszTag.hides() } }) } } }, bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function (a) { bszTag.texts(a), bszTag.shows() }), bszTag = { bszs: ["site_pv", "page_pv", "site_uv"], texts: function (a) { this.bszs.map(function (b) { var c = document.getElementById("busuanzi_value_" + b); c &amp;&amp; (c.innerHTML = a[b]) }) }, hides: function () { this.bszs.map(function (a) { var b = document.getElementById("busuanzi_container_" + a); b &amp;&amp; (b.style.display = "none") }) }, shows: function () { this.bszs.map(function (a) { var b = document.getElementById("busuanzi_container_" + a); b &amp;&amp; (b.style.display = "inline") }) } };</code></pre><p>修改为以下代码：</p><pre><code>var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a||"interactive"===document.readyState||"complete"===document.readyState?c.call(document):b.push(function(){return c.call(this)}),this},d=function(){for(var a=0,c=b.length;c&gt;a;a++)b[a].apply(document);b=[]},e=function(){a||(a=!0,d.call(window),document.removeEventListener?document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.detachEvent("onreadystatechange",e),window==window.top&amp;&amp;(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.attachEvent("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&amp;&amp;e()}),window==window.top&amp;&amp;(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b){var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",scriptTag.defer=!0,scriptTag.src=a,scriptTag.referrerPolicy="no-referrer-when-downgrade",document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a){return function(b){ready(function(){try{a(b),s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)}catch(c){console.error(c),bszTag.hides()}})}}},bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);c&amp;&amp;(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="none")})},shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="inline")})}};</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+            <tag> live2d </tag>
+            
+            <tag> busuanzi </tag>
+            
+            <tag> 解决live2d看板娘和busuanzi不蒜子计数冲突 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Data Structure</title>
       <link href="/2023/06/01/data-structure/"/>
       <url>/2023/06/01/data-structure/</url>
@@ -67,6 +98,12 @@
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">hexo</span> new <span class="st">"My New Post"</span></code></pre></div><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server">Run server</h3><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">hexo</span> server</code></pre></div><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files">Generate static files</h3><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">hexo</span> generate</code></pre></div><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="ex">hexo</span> deploy</code></pre></div><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
