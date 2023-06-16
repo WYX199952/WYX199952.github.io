@@ -6,7 +6,7 @@
   <link href="https://wyx199952.github.io/atom.xml" rel="self"/>
   
   <link href="https://wyx199952.github.io/"/>
-  <updated>2023-06-09T03:23:59.858Z</updated>
+  <updated>2023-06-16T02:16:54.040Z</updated>
   <id>https://wyx199952.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于hexo博客的note标签美化</title>
+    <link href="https://wyx199952.github.io/2023/06/16/note-biao-qian-mei-hua/"/>
+    <id>https://wyx199952.github.io/2023/06/16/note-biao-qian-mei-hua/</id>
+    <published>2023-06-16T02:09:33.320Z</published>
+    <updated>2023-06-16T02:16:54.040Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="note标签美化" scheme="https://wyx199952.github.io/categories/note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>
+    
+    <category term="note标签" scheme="https://wyx199952.github.io/tags/note%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-动态灯笼挂件</title>
+    <link href="https://wyx199952.github.io/2023/06/16/lantern/"/>
+    <id>https://wyx199952.github.io/2023/06/16/lantern/</id>
+    <published>2023-06-16T01:46:47.501Z</published>
+    <updated>2023-06-16T02:10:38.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="灯笼挂件" scheme="https://wyx199952.github.io/categories/%E7%81%AF%E7%AC%BC%E6%8C%82%E4%BB%B6/"/>
+    
+    
+    <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>
+    
+    <category term="动态灯笼挂件" scheme="https://wyx199952.github.io/tags/%E5%8A%A8%E6%80%81%E7%81%AF%E7%AC%BC%E6%8C%82%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔文章模板</title>
+    <link href="https://wyx199952.github.io/2023/06/09/essay/"/>
+    <id>https://wyx199952.github.io/2023/06/09/essay/</id>
+    <published>2023-06-09T05:34:31.606Z</published>
+    <updated>2023-06-09T05:46:35.957Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;ipage&quot;&gt;
+    &lt;div class=&quot;ititle&quot;&gt;标题&lt;/div&gt; 
+    &lt;div class=&quot;izhengwen&quot;&gt; 
+        &lt;p&gt;正文&lt;/p&gt; 
+        &lt;p&gt;正文&lt;/p&gt; 
+    &lt;/div&gt; 
+   </summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://wyx199952.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://wyx199952.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="模板" scheme="https://wyx199952.github.io/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>博客搭建遇到的问题</title>

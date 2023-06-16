@@ -187,6 +187,3 @@ if (localStorage.getItem('isDark') === '1') {
     document.body.classList.remove('DarkMode');
     $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')
 }
-
-//note标签美化
-<link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media='all'/>
