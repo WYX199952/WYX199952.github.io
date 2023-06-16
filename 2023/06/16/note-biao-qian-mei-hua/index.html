@@ -5,9 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="关于hexo博客的note标签美化, 云袅小站">
-    <meta name="description" content="&amp;lt;div class=&#34;note info&#34;&amp;gt;这里是 info 标签样式&amp;lt;/div&amp;gt;
+    <meta name="description" content="
+前言：为了美化hexo博客文章，所以加入note标签并加以美化。
 
-&amp;lt;div class=&#34;note info no-icon&#34;&amp;gt;这里是不带符号的 info 标签样式&amp;lt;/div&amp;">
+
+引入FontAwesome v4.7.0 版本的 CSS 文件
+
+&amp;lt;link type=&#39;text/css&#39; rel=&#34;stylesheet&#34;
+href=&#34;htt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -878,14 +883,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    164
+                    488
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -911,7 +916,86 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>&lt;div class="note info"&gt;这里是 info 标签样式&lt;/div&gt;
+                <div class="note info">
+前言：为了美化hexo博客文章，所以加入note标签并加以美化。
+</div>
+<h3>
+引入FontAwesome v4.7.0 版本的 CSS 文件
+</h3>
+<pre><code>&lt;link type='text/css' rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media='all'/&gt;</code></pre>
+<h3>
+添加一段自定义css代码
+</h3>
+<pre><code>    /* note 公共样式 */
+.note {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: initial;
+    border-left: 3px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    font-size: var(--content-font-size);
+}
+
+.note:not(.no-icon):before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: larger;
+    top: 11px;
+    left: 15px;
+}
+
+.note:not(.no-icon) {
+    padding-left: 45px;
+}
+
+.note.info {
+    background-color: #eef7fa;
+    border-left-color: #428bca;
+}
+
+.note.info:not(.no-icon):before {
+    content: "\f05a";
+    color: #428bca;
+}
+
+.note.warning {
+    background-color: #fdf8ea;
+    border-left-color: #f0ad4e;
+}
+
+.note.warning:not(.no-icon):before {
+    content: "\f06a";
+    color: #f0ad4e;
+}
+
+.note.primary {
+    background-color: #f5f0fa;
+    border-left-color: #6f42c1;
+}
+
+.note.primary:not(.no-icon):before {
+    content: "\f055";
+    color: #6f42c1;
+}
+
+.note.danger {
+    background-color: #fcf1f2;
+    border-left-color: #d9534f;
+}
+
+.note.danger:not(.no-icon):before {
+    content: "\f056";
+    color: #d9534f;
+}</code></pre>
+<h3>
+最后，在写 md 文件时以 html 标签方式引入即可
+</h3>
+<p>注意：每个 div 标签结束后面必须空一行</p>
+<pre><code>&lt;div class="note info"&gt;这里是 info 标签样式&lt;/div&gt;
 
 &lt;div class="note info no-icon"&gt;这里是不带符号的 info 标签样式&lt;/div&gt;
 
@@ -926,6 +1010,30 @@
 &lt;div class="note danger"&gt;这里是 danger 标签样式&lt;/div&gt;
 
 &lt;div class="note danger no-icon"&gt;这里是不带符号的 danger 标签样式&lt;/div&gt;</code></pre>
+<div class="note info">
+这里是 info 标签样式
+</div>
+<div class="note info no-icon">
+这里是不带符号的 info 标签样式
+</div>
+<div class="note primary">
+这里是 primary 标签样式
+</div>
+<div class="note primary no-icon">
+这里是不带符号的 primary 标签样式
+</div>
+<div class="note warning">
+这里是 warning 标签样式
+</div>
+<div class="note warning no-icon">
+这里是不带符号的 warning 标签样式
+</div>
+<div class="note danger">
+这里是 danger 标签样式
+</div>
+<div class="note danger no-icon">
+这里是不带符号的 danger 标签样式
+</div>
 
                 
             </div>
@@ -1408,7 +1516,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.4k</span>
+                        class="white-color">4.8k</span>
             
             
             
