@@ -6,7 +6,7 @@
   <link href="https://wyx199952.github.io/atom.xml" rel="self"/>
   
   <link href="https://wyx199952.github.io/"/>
-  <updated>2023-06-16T03:30:22.735Z</updated>
+  <updated>2023-06-16T05:41:04.198Z</updated>
   <id>https://wyx199952.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wyx199952.github.io/2023/06/16/note-biao-qian-mei-hua/"/>
     <id>https://wyx199952.github.io/2023/06/16/note-biao-qian-mei-hua/</id>
     <published>2023-06-16T02:09:33.320Z</published>
-    <updated>2023-06-16T03:30:22.735Z</updated>
+    <updated>2023-06-16T05:41:04.198Z</updated>
     
     
       
@@ -34,7 +34,9 @@
     
     
     
-    <category term="note标签美化" scheme="https://wyx199952.github.io/categories/note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/"/>
+    <category term="博客搭建" scheme="https://wyx199952.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="note标签美化" scheme="https://wyx199952.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/"/>
     
     
     <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>
@@ -48,7 +50,7 @@
     <link href="https://wyx199952.github.io/2023/06/16/lantern/"/>
     <id>https://wyx199952.github.io/2023/06/16/lantern/</id>
     <published>2023-06-16T01:46:47.501Z</published>
-    <updated>2023-06-16T02:10:38.720Z</updated>
+    <updated>2023-06-16T05:36:41.854Z</updated>
     
     
       
@@ -66,7 +68,9 @@
     
     <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>
     
-    <category term="动态灯笼挂件" scheme="https://wyx199952.github.io/tags/%E5%8A%A8%E6%80%81%E7%81%AF%E7%AC%BC%E6%8C%82%E4%BB%B6/"/>
+    <category term="动态灯笼" scheme="https://wyx199952.github.io/tags/%E5%8A%A8%E6%80%81%E7%81%AF%E7%AC%BC/"/>
+    
+    <category term="挂件" scheme="https://wyx199952.github.io/tags/%E6%8C%82%E4%BB%B6/"/>
     
   </entry>
   
@@ -75,20 +79,14 @@
     <link href="https://wyx199952.github.io/2023/06/09/essay/"/>
     <id>https://wyx199952.github.io/2023/06/09/essay/</id>
     <published>2023-06-09T05:34:31.606Z</published>
-    <updated>2023-06-09T05:46:35.957Z</updated>
+    <updated>2023-06-16T05:38:35.864Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;div class=&quot;ipage&quot;&gt;
-    &lt;div class=&quot;ititle&quot;&gt;标题&lt;/div&gt; 
-    &lt;div class=&quot;izhengwen&quot;&gt; 
-        &lt;p&gt;正文&lt;/p&gt; 
-        &lt;p&gt;正文&lt;/p&gt; 
-    &lt;/div&gt; 
-   </summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
@@ -108,21 +106,14 @@
     <link href="https://wyx199952.github.io/2023/06/09/problems/"/>
     <id>https://wyx199952.github.io/2023/06/09/problems/</id>
     <published>2023-06-09T03:04:00.890Z</published>
-    <updated>2023-06-09T03:23:59.858Z</updated>
+    <updated>2023-06-16T05:38:17.856Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1&gt;
-解决live2d看板娘和busuanzi不蒜子计数冲突
-&lt;/h1&gt;
-&lt;p&gt;如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。&lt;/p&gt;
-&lt;h2&gt;
-解决方法：
-&lt;/h2&gt;
-&lt;p&gt;打开 themes_partial</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
@@ -146,26 +137,24 @@
     <link href="https://wyx199952.github.io/2023/06/01/data-structure/"/>
     <id>https://wyx199952.github.io/2023/06/01/data-structure/</id>
     <published>2023-06-01T07:52:01.550Z</published>
-    <updated>2023-06-01T08:44:16.015Z</updated>
+    <updated>2023-06-16T05:39:54.018Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1&gt;
-数据结构(C语言版|第二版)
-&lt;/h1&gt;
-&lt;h2&gt;
-算法学习总结
-&lt;/h2&gt;
-&lt;p&gt;访问本链接：&lt;a</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
     
     
     <category term="数据结构" scheme="https://wyx199952.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法" scheme="https://wyx199952.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="考研学习" scheme="https://wyx199952.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/%E8%80%83%E7%A0%94%E5%AD%A6%E4%B9%A0/"/>
     
     
     <category term="算法" scheme="https://wyx199952.github.io/tags/%E7%AE%97%E6%B3%95/"/>
@@ -181,20 +170,14 @@
     <link href="https://wyx199952.github.io/2021/01/19/hexo-theme-matery-jiao-cheng/"/>
     <id>https://wyx199952.github.io/2021/01/19/hexo-theme-matery-jiao-cheng/</id>
     <published>2021-01-19T03:35:24.478Z</published>
-    <updated>2023-06-01T09:59:18.190Z</updated>
+    <updated>2023-06-16T05:37:22.799Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1&gt;
-hexo-theme-matery note
-&lt;/h1&gt;
-&lt;h2&gt;
-配置
-&lt;/h2&gt;
-&lt;p&gt;参考原 github 项目进行整理：&lt;a</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
@@ -202,7 +185,7 @@ hexo-theme-matery note
     <content src="https://wyx199952.github.io/images/theme/1.png" type="image"/>
     
     
-    <category term="hexo-theme-matery" scheme="https://wyx199952.github.io/categories/hexo-theme-matery/"/>
+    <category term="hexo-matery" scheme="https://wyx199952.github.io/categories/hexo-matery/"/>
     
     
     <category term="hexo" scheme="https://wyx199952.github.io/tags/hexo/"/>

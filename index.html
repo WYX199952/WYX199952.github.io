@@ -88,6 +88,12 @@
 
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+	
+	
+	<!--自定义看板娘-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="/source/live2d-widget/autoload.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -240,8 +246,6 @@
 </head>
 <body>
     <header class="navbar-fixed">
-	<!-- 引入FontAwesome v4.7.0 版本的 CSS 文件 -->
-	<link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media='all'/>
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -331,67 +335,6 @@
       
       <span>友情链接</span>
     </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/medias" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-list" style="zoom: 0.6;"></i>
-      
-      <span>Medias</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/musics">
-          
-          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Musics</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/movies">
-          
-          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Movies</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/books">
-          
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Books</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/gallery">
-          
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Gallery</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/essay">
-          
-          <i class="fas fa-pencil" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Essay</span>
-        </a>
-      </li>
-      
-    </ul>
     
   </li>
   
@@ -501,71 +444,6 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-list"></i>
-			
-			Medias
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>
-
-                  <a href="/musics " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Musics</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/movies " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Movies</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/books " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Books</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/gallery " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Gallery</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/essay " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-pencil" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Essay</span>
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-        
         
         <li><div class="divider"></div></li>
         <li>
@@ -577,6 +455,27 @@
     </ul>
 </div>
 
+
+			    
+			  <div class="weather" style="position:absolute; margin-left:180px;">
+			    <!-- 《添加“心知天气”-->
+			      <div id="tp-weather-widget"></div>
+			    <script>
+			      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+			      window.SeniverseWeatherWidget('show', {
+			        flavor: "slim",
+			        location: "WWGTVPQ5GXNQ",
+			        geolocation: false,
+			        language: "zh-Hans",
+			        unit: "c",
+			        theme: "auto",
+			        token: "f98bbb0f-16ce-47ad-8f61-f3ce81996c59",
+			        hover: "enabled",
+			        container: "tp-weather-widget"
+			      })
+			    </script>
+			    <!-- 添加“心知天气”》-->
+			    </div>
 
         </div>
 
@@ -1060,6 +959,10 @@
                         
                             <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category">数据结构</a>
                         
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="category">算法</a>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/%E8%80%83%E7%A0%94%E5%AD%A6%E4%B9%A0/" class="category">考研学习</a>
+                        
                     
                 </div>
                 <a href="/2023/06/01/data-structure/">
@@ -1067,13 +970,9 @@
                 </a>
                 <p class="post-description">
                     
-                        
-数据结构(C语言版|第二版)
-
-
+                        数据结构(C语言版|第二版)
 算法学习总结
-
-访问本链接：https://blog.csdn.net/Xiao_Ya__?spm=10
+访问本链接：https://blog.csdn.net/Xiao_Ya__?spm=1000.2
                     
                 </p>
                 <a href="/2023/06/01/data-structure/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
@@ -1092,7 +991,7 @@
                 <div class="post-categories">
                     
                         
-                            <a href="/categories/hexo-theme-matery/" class="category">hexo-theme-matery</a>
+                            <a href="/categories/hexo-matery/" class="category">hexo-matery</a>
                         
                     
                 </div>
@@ -1101,13 +1000,11 @@
                 </a>
                 <p class="post-description">
                     
-                        
-hexo-theme-matery note
-
+                        hexo-theme-matery note
 
 配置
 
-参考原 github 项目进行整理：https://github.com/bli
+参考原 github 项目进行整理：https://github.com/blink
                     
                 </p>
                 <a href="/2021/01/19/hexo-theme-matery-jiao-cheng/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
@@ -1151,12 +1048,8 @@ hexo-theme-matery note
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-数据结构(C语言版|第二版)
-
-
+                                数据结构(C语言版|第二版)
 算法学习总结
-
 访问本链接：https://blog.csdn.net/Xiao_Ya__?spm=1000.2115.3001.5343
 
                             
@@ -1171,6 +1064,14 @@ hexo-theme-matery note
                                 
                                 <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
                                     数据结构
+                                </a>
+                                
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/%E8%80%83%E7%A0%94%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    考研学习
                                 </a>
                                 
                                 
@@ -1215,17 +1116,13 @@ hexo-theme-matery note
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-hexo-theme-matery note
-
+                                hexo-theme-matery note
 
 配置
 
 参考原 github 项目进行整理：https://github.com/blinkfox/hexo-theme-matery
-
 _config.yml 的修改建议
-
-在 hexo
+在 hexo 根目录
                             
                         </div>
                         <div class="publish-info">
@@ -1236,8 +1133,8 @@ _config.yml 的修改建议
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/hexo-theme-matery/" class="post-category">
-                                    hexo-theme-matery
+                                <a href="/categories/hexo-matery/" class="post-category">
+                                    hexo-matery
                                 </a>
                                 
                                 
@@ -1278,14 +1175,12 @@ _config.yml 的修改建议
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-前言：为了美化hexo博客文章，所以加入note标签并加以美化。
-
+                                前言：为了美化hexo博客文章，所以加入note标签并加以美化。
 
 引入FontAwesome v4.7.0 版本的 CSS 文件
 
 &lt;link type='text/css' rel="stylesheet"
-href="htt
+href="https
                             
                         </div>
                         <div class="publish-info">
@@ -1296,7 +1191,11 @@ href="htt
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/" class="post-category">
+                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
+                                </a>
+                                
+                                <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/note%E6%A0%87%E7%AD%BE%E7%BE%8E%E5%8C%96/" class="post-category">
                                     note标签美化
                                 </a>
                                 
@@ -1338,12 +1237,10 @@ href="htt
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-添加动态灯笼挂件
+                                添加动态灯笼挂件
 
 建议添加在主题下的 header.ejs 里面,我的是 hexo-theme-matery 主题，所以我放在 hexo-theme-matery/layout/_partial/header.ejs
-
-header.e
+header.ejs
                             
                         </div>
                         <div class="publish-info">
@@ -1370,8 +1267,12 @@ header.e
                             <span class="chip bg-color">hexo</span>
                         </a>
                         
-                        <a href="/tags/%E5%8A%A8%E6%80%81%E7%81%AF%E7%AC%BC%E6%8C%82%E4%BB%B6/">
-                            <span class="chip bg-color">动态灯笼挂件</span>
+                        <a href="/tags/%E5%8A%A8%E6%80%81%E7%81%AF%E7%AC%BC/">
+                            <span class="chip bg-color">动态灯笼</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%8C%82%E4%BB%B6/">
+                            <span class="chip bg-color">挂件</span>
                         </a>
                         
                     </div>
@@ -1456,14 +1357,12 @@ header.e
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                
-解决live2d看板娘和busuanzi不蒜子计数冲突
+                                解决live2d看板娘和busuanzi不蒜子计数冲突
 
 如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。
-
 解决方法：
 
-打开 themes_partial 中的 post-d
+打开 themes\你的主题\layout_partial
                             
                         </div>
                         <div class="publish-info">
@@ -2047,12 +1946,14 @@ $(function () {
         </div>              
     </div>
 	
-	
-	
+	<!--自定义看板娘-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="/source/live2d-widget/autoload.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
 	
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 
 
 

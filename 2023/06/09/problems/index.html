@@ -5,14 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="博客搭建遇到的问题, 云袅小站">
-    <meta name="description" content="
-解决live2d看板娘和busuanzi不蒜子计数冲突
+    <meta name="description" content="解决live2d看板娘和busuanzi不蒜子计数冲突
 
 如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。
-
 解决方法：
 
-打开 themes_partial 中的 post-d">
+打开 themes\你的主题\layout_partial">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -58,6 +56,12 @@
 
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+	
+	
+	<!--自定义看板娘-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="/source/live2d-widget/autoload.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -210,8 +214,6 @@
 </head>
 <body>
     <header class="navbar-fixed">
-	<!-- 引入FontAwesome v4.7.0 版本的 CSS 文件 -->
-	<link type='text/css' rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media='all'/>
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -301,67 +303,6 @@
       
       <span>友情链接</span>
     </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/medias" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-list" style="zoom: 0.6;"></i>
-      
-      <span>Medias</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/musics">
-          
-          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Musics</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/movies">
-          
-          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Movies</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/books">
-          
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Books</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/gallery">
-          
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Gallery</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/essay">
-          
-          <i class="fas fa-pencil" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>Essay</span>
-        </a>
-      </li>
-      
-    </ul>
     
   </li>
   
@@ -471,71 +412,6 @@
           
         </li>
         
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-list"></i>
-			
-			Medias
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>
-
-                  <a href="/musics " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Musics</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/movies " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Movies</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/books " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Books</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/gallery " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Gallery</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/essay " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-pencil" style="position: absolute;left:50px" ></i>
-			      
-		          <span>Essay</span>
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-        
         
         <li><div class="divider"></div></li>
         <li>
@@ -547,6 +423,27 @@
     </ul>
 </div>
 
+
+			    
+			  <div class="weather" style="position:absolute; margin-left:180px;">
+			    <!-- 《添加“心知天气”-->
+			      <div id="tp-weather-widget"></div>
+			    <script>
+			      (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+			      window.SeniverseWeatherWidget('show', {
+			        flavor: "slim",
+			        location: "WWGTVPQ5GXNQ",
+			        geolocation: false,
+			        language: "zh-Hans",
+			        unit: "c",
+			        theme: "auto",
+			        token: "f98bbb0f-16ce-47ad-8f61-f3ce81996c59",
+			        hover: "enabled",
+			        container: "tp-weather-widget"
+			      })
+			    </script>
+			    <!-- 添加“心知天气”》-->
+			    </div>
 
         </div>
 
@@ -884,14 +781,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-09
+                    2023-06-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    756
+                    766
                 </div>
                 
 
@@ -924,14 +821,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>
-解决live2d看板娘和busuanzi不蒜子计数冲突
-</h1>
+                <h1>解决live2d看板娘和busuanzi不蒜子计数冲突</h1>
+
 <p>如果你的博客同时部署了不蒜子统计访客的功能，那么可能会出现 bug，live2D 和不蒜子存在一些兼容问题。</p>
-<h2>
-解决方法：
-</h2>
-<p>打开 themes_partial 中的 post-detail.ejs，找到对应代码字段：</p>
+<h2>解决方法：</h2>
+
+<p>打开 themes\你的主题\layout_partial 中的 post-detail.ejs，找到对应代码字段：</p>
 <pre><code>&lt;% if (theme.busuanziStatistics &amp;&amp; theme.busuanziStatistics.enable) { %&gt;
 &lt;div id="busuanzi_container_page_pv" class="info-break-policy"&gt;
     &lt;i class="fa fa-eye fa-fw"&gt;&lt;/i&gt;&lt;%- __('readCount') %&gt;:&amp;nbsp;&amp;nbsp;
@@ -944,10 +839,116 @@
     &lt;i class="fa fa-eye fa-fw"&gt;&lt;/i&gt;&lt;%- __('readCount') %&gt;:&amp;nbsp;&amp;nbsp;
     &lt;span id="busuanzi_value_page_pv" &gt;&lt;/span&gt;
 &lt;% } %&gt;</code></pre>
-<p>打开.pure.mini.js，找到相应代码字段：</p>
-<pre><code>var bszCaller, bszTag; !function () { var c, d, e, a = !1, b = []; ready = function (c) { return a || "interactive" === document.readyState || "complete" === document.readyState ? c.call(document) : b.push(function () { return c.call(this) }), this }, d = function () { for (var a = 0, c = b.length; c &gt; a; a++)b[a].apply(document); b = [] }, e = function () { a || (a = !0, d.call(window), document.removeEventListener ? document.removeEventListener("DOMContentLoaded", e, !1) : document.attachEvent &amp;&amp; (document.detachEvent("onreadystatechange", e), window == window.top &amp;&amp; (clearInterval(c), c = null))) }, document.addEventListener ? document.addEventListener("DOMContentLoaded", e, !1) : document.attachEvent &amp;&amp; (document.attachEvent("onreadystatechange", function () { /loaded|complete/.test(document.readyState) &amp;&amp; e() }), window == window.top &amp;&amp; (c = setInterval(function () { try { a || document.documentElement.doScroll("left") } catch (b) { return } e() }, 5))) }(), bszCaller = { fetch: function (a, b) { var c = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random()); window[c] = this.evalCall(b), a = a.replace("=BusuanziCallback", "=" + c), scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, document.getElementsByTagName("HEAD")[0].appendChild(scriptTag) }, evalCall: function (a) { return function (b) { ready(function () { try { a(b), scriptTag.parentElement.removeChild(scriptTag) } catch (c) { bszTag.hides() } }) } } }, bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function (a) { bszTag.texts(a), bszTag.shows() }), bszTag = { bszs: ["site_pv", "page_pv", "site_uv"], texts: function (a) { this.bszs.map(function (b) { var c = document.getElementById("busuanzi_value_" + b); c &amp;&amp; (c.innerHTML = a[b]) }) }, hides: function () { this.bszs.map(function (a) { var b = document.getElementById("busuanzi_container_" + a); b &amp;&amp; (b.style.display = "none") }) }, shows: function () { this.bszs.map(function (a) { var b = document.getElementById("busuanzi_container_" + a); b &amp;&amp; (b.style.display = "inline") }) } };</code></pre>
+<p>打开\myblog\public\libs\others\busuanzi.pure.mini.js，找到相应代码字段：</p>
+<pre><code>var bszCaller, bszTag; !function () { var c, d, e, a = !1, b = []; ready = function (c)
+
+{ return a || "interactive" === document.readyState || "complete" ===
+
+document.readyState ? c.call(document) : b.push(function ()
+
+{ return c.call(this) }), this }, d = function () { for (var a = 0, c = b.length; c &gt; a; a++)
+
+b[a].apply(document); b = [] },e = function () { a || (a = !0, d.call(window),
+
+document.removeEventListener ? document.removeEventListener("DOMContentLoaded", e, !1)
+
+: document.attachEvent &amp;&amp; (document.detachEvent("onreadystatechange", e),
+
+ window == window.top &amp;&amp; (clearInterval(c), c = null))) }, document.addEventListener ?
+
+ document.addEventListener("DOMContentLoaded", e, !1) : document.attachEvent &amp;&amp;
+
+ (document.attachEvent("onreadystatechange", function () { /loaded|complete/.test(document.readyState)
+
+ &amp;&amp; e() }), window == window.top &amp;&amp; (c = setInterval(function () { try
+
+ { a || document.documentElement.doScroll("left") } catch (b) { return } e() }, 5)))
+
+}(), bszCaller = { fetch: function (a, b) { var c = "BusuanziCallback_" +
+
+Math.floor(1099511627776 * Math.random()); window[c] = this.evalCall(b),
+
+a = a.replace("=BusuanziCallback", "=" + c), scriptTag = document.createElement("SCRIPT"),
+
+scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a,
+
+document.getElementsByTagName("HEAD")[0].appendChild(scriptTag) }, evalCall:
+
+function (a) { return function (b) { ready(function () { try { a(b),
+
+scriptTag.parentElement.removeChild(scriptTag) } catch (c) { bszTag.hides() } }) } } },
+
+bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",
+
+function (a) { bszTag.texts(a), bszTag.shows() }), bszTag = { bszs: ["site_pv", "page_pv",
+
+"site_uv"], texts: function (a) { this.bszs.map(function (b)
+
+{ var c = document.getElementById("busuanzi_value_" + b); c &amp;&amp; (c.innerHTML = a[b]) })
+
+}, hides: function () { this.bszs.map(function (a)
+
+{ var b = document.getElementById("busuanzi_container_" + a);
+
+b &amp;&amp; (b.style.display = "none") }) },
+
+shows: function () { this.bszs.map(function (a) {
+
+var b = document.getElementById("busuanzi_container_" + a);
+
+b &amp;&amp; (b.style.display = "inline") }) } };</code></pre>
 <p>修改为以下代码：</p>
-<pre><code>var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c){return a||"interactive"===document.readyState||"complete"===document.readyState?c.call(document):b.push(function(){return c.call(this)}),this},d=function(){for(var a=0,c=b.length;c&gt;a;a++)b[a].apply(document);b=[]},e=function(){a||(a=!0,d.call(window),document.removeEventListener?document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.detachEvent("onreadystatechange",e),window==window.top&amp;&amp;(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.attachEvent("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&amp;&amp;e()}),window==window.top&amp;&amp;(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b){var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",scriptTag.defer=!0,scriptTag.src=a,scriptTag.referrerPolicy="no-referrer-when-downgrade",document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a){return function(b){ready(function(){try{a(b),s=document.querySelector('[src*=BusuanziCallback]'),s.parentElement.removeChild(s)}catch(c){console.error(c),bszTag.hides()}})}}},bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);c&amp;&amp;(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="none")})},shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="inline")})}};</code></pre>
+<pre><code>var bszCaller,bszTag;!function(){var c,d,e,a=!1,b=[];ready=function(c)
+
+{return a||"interactive"===document.readyState||"complete"===document.readyState?
+
+c.call(document):b.push(function(){return c.call(this)}),this},
+
+d=function(){for(var a=0,c=b.length;c&gt;a;a++)b[a].apply(document);b=[]},
+
+e=function(){a||(a=!0,d.call(window),document.removeEventListener?
+
+document.removeEventListener("DOMContentLoaded",e,!1):document.attachEvent
+
+&amp;&amp;(document.detachEvent("onreadystatechange",e),window==window.top&amp;&amp;
+
+(clearInterval(c),c=null)))},document.addEventListener?document.addEventListener
+
+("DOMContentLoaded",e,!1):document.attachEvent&amp;&amp;(document.attachEvent
+
+("onreadystatechange",function(){/loaded|complete/.test(document.readyState)&amp;&amp;e()}),
+
+window==window.top&amp;&amp;(c=setInterval(function(){try{a||document.documentElement.doScroll("left")}
+
+catch(b){return}e()},5)))}(),bszCaller={fetch:function(a,b)
+
+{var c="BusuanziCallback_"+Math.floor(1099511627776*Math.random());
+
+window[c]=this.evalCall(b),a=a.replace("=BusuanziCallback","="+c),
+
+scriptTag=document.createElement("SCRIPT"),scriptTag.type="text/javascript",
+
+scriptTag.defer=!0,scriptTag.src=a,scriptTag.referrerPolicy="no-referrer-when-downgrade",
+
+document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)},evalCall:function(a)
+
+{return function(b){ready(function(){try{a(b),s=document.querySelector('[src*=BusuanziCallback]'),
+
+s.parentElement.removeChild(s)}catch(c){console.error(c),bszTag.hides()}})}}},
+
+bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback",
+
+function(a){bszTag.texts(a),bszTag.shows()}),bszTag={bszs:["site_pv","page_pv","site_uv"],
+
+texts:function(a){this.bszs.map(function(b){var c=document.getElementById("busuanzi_value_"+b);
+
+c&amp;&amp;(c.innerHTML=a[b])})},hides:function(){this.bszs.map(function(a)
+
+{var b=document.getElementById("busuanzi_container_"+a);b&amp;&amp;(b.style.display="none")})},
+
+shows:function(){this.bszs.map(function(a){var b=document.getElementById("busuanzi_container_"+a);
+
+b&amp;&amp;(b.style.display="inline")})}};</code></pre>
 
                 
             </div>
@@ -1188,6 +1189,14 @@
                                     数据结构
                                 </a>
                             
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95/%E8%80%83%E7%A0%94%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    考研学习
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1280,6 +1289,29 @@
 <style> 
 .ititle { margin: 15px 0; text-align:center; font-family: 'Architects Daughter', cursive; } 
 .ipage { line-height: 30px; margin: 0 auto; padding: 15px 32px 29px; background-color: #f9f9f9; box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26); -moz-border-radius-bottomleft: 20px 500px; -moz-border-radius-bottomright: 500px 30px; -moz-border-radius-topright: 5px 100px; -webkit-border-bottom-left-radius: 20px 500px; -webkit-border-bottom-right-radius: 64px 10px; -webkit-border-top-right-radius: 5px 100px; border-bottom-left-radius: 20px 500px; border-bottom-right-radius: 64px 10px; border-top-right-radius: 5px 100px; -webkit-background-size: 100% 30px; -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2); text-shadow: 0 1px 0 #F6EF97; position: relative; } .izhengwen { position: relative; top: 0; left: 0; z-index: 2; height: auto; background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9); background-size: 100% 32px; } #articleContent p { margin: 0 } .ititle { font-family: 'Architects Daughter', cursive; font-size: 1.45rem!important; padding: 10px auto; } .izhengwen p { position: relative; line-height: 2.2rem!important; text-indent: 2em; font-family: 'Architects Daughter', cursive!important; font-size: 1.45rem!important; } .ipage::before { content: " "; display: inline-block; position: absolute; top: 0px; bottom: 0; right: 52px; z-index: 4; width: 4px; height: 100%; border-left: 1px solid #fca1a1; } .izhengwen p:nth-child(odd):before { content: " "; display: inline-block; position: absolute; top: 0; left: -16px; z-index: 3; width: 24px; height: 24px; background-color: #fff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26); } .ipage:after { content: " "; display: inline-block; position: absolute; top: 0; bottom: 0; left: 52px; z-index: 3; width: 4px; height: 100%; border-left: 4px double #fca1a1; } .ipage p { padding: 0 2em; color: #333!important; } body.dark .ipage { opacity: 0.85; } /*小屏幕下(手机类)的样式*/ @media only screen and (max-width: 600px) { .ipage { padding: 15px 23px 29px; } .ipage:after { left: 36px; } .ipage::before { right: 36px; } .ipage p { padding: 0 0.9em; } } </style>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -1807,12 +1839,14 @@ $(function () {
         </div>              
     </div>
 	
-	
-	
+	<!--自定义看板娘-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="/source/live2d-widget/autoload.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
 
 	
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 
 
 
