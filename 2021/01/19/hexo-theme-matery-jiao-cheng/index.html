@@ -5,13 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="hexo-theme-matery 教程, 云袅小站">
-    <meta name="description" content="hexo-theme-matery note
+    <meta name="description" content="
+hexo-theme-matery note
+
 
 配置
 
 参考原 github 项目进行整理：https://github.com/blinkfox/hexo-theme-matery
+
 _config.yml 的修改建议
-在 hexo 根目录">
+
+在 hexo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -917,25 +921,29 @@ _config.yml 的修改建议
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>hexo-theme-matery note</h1>
-
-<h2>配置</h2>
-
+                <h1>
+hexo-theme-matery note
+</h1>
+<h2>
+配置
+</h2>
 <p>参考原 github 项目进行整理：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
-<h3>_config.yml 的修改建议</h3>
+<h3>
+_config.yml 的修改建议
+</h3>
 在 hexo 根目录下的 _config.yml 文件中：
 <p>
-
 </p><p>1.切换 theme 为 hexo-theme-matery</p>
 <p>2.url 改为网站 url (如：<a target="_blank" rel="noopener" href="http://xxx.github.io">http://xxx.github.io</a>)</p>
 <p>3.per_page 数值改为 6 及 6 的倍数，这样文章列表在各个屏幕下都能较好显示</p>
 <p>4.插入图片（有点复杂，可以先跳过）。根据 <a>知乎链接</a> 配置好 post_asset_folder，里面提到的 typora 技巧也很实用，建议采用。且一般来讲链接中提到的 hexo-renderer-marked 插件都是已经内置好的，不然你的博客不会渲染成功。</p>
-<p>但是这个方法不能控制图片大小，而且配置过 typora 后还要再改图片的路径。我再下载了 hexo-asset-image 插件过后，直接用 typora 中的 html 方法 img src=’post_name/img.jpg’ 引用图片，不需要二次更改路径。</p>
+<p>但是这个方法不能控制图片大小，而且配置过 typora 后还要再改图片的路径。我再下载了 hexo-asset-image 插件过后，直接用 typora 中的 html 方法 img src='post_name/img.jpg' 引用图片，不需要二次更改路径。</p>
 <p></p>
-<h3>新建分类 categories 页</h3>
-    sudo hexo new page 'categories'
-categories 页是用来展示所有分类的页面
-
+<h3>
+新建分类 categories 页
+</h3>
+<pre><code>sudo hexo new page 'categories'</code></pre>
+<p>categories 页是用来展示所有分类的页面</p>
 <p>修改 /source/categories/index.md 文件的 front-matter (Front-matter 是文件最上方以 —- 分隔的区域，用于指定个别文件的变量)</p>
 <pre><code>---
 title: categories
@@ -956,8 +964,9 @@ categories:
 - hexo
 ---</code></pre>
 <p>这个文件在分类时会被分配到所有提到的 categories 中，这些 categories 的路径是逐渐往下的 /categories/软件基础/hexo/，它们都有自己的 page 来收纳属于自己类别的文章。</p>
-<h3>新建标签 tags 页</h3>
-
+<h3>
+新建标签 tags 页
+</h3>
 <p>新建 page</p>
 <pre><code>hexo new page "tags"</code></pre>
 <p>修改对应 index.md</p>
@@ -968,15 +977,22 @@ type: "tags"
 layout: "tags"
 ---</code></pre>
 <p>给 post 指定 tags 只需要在 front-matter 中写好就行了，如上面 categories 的例子。</p>
-<h3>新建关于我 about 页</h3>
-<h3>新建留言板 contact 页</h3>
-<h3>新建友情链接 friends 页</h3>
-
+<h3>
+新建关于我 about 页
+</h3>
+<h3>
+新建留言板 contact 页
+</h3>
+<h3>
+新建友情链接 friends 页
+</h3>
 <p>新建方法都是和上面的方法一样的</p>
-<h2>菜单导航配置与渲染</h2>
-
-<h3>名称、路径、图标</h3>
-
+<h2>
+菜单导航配置与渲染
+</h2>
+<h3>
+名称、路径、图标
+</h3>
 <p>配置菜单导航的名称、路径 url、和图标 icon，配置文件在 themes/hexo-theme-matery/._config.yml</p>
 <p>更改 menu 部分即可</p>
 <pre><code>menu:# 把 Index 改为 Home
@@ -990,12 +1006,14 @@ icon: fas fa-tags</code></pre>
 <p>名称可以是中文</p>
 <p>图标可以在<a target="_blank" rel="noopener" href="https://fontawesome.com/icons">Font Awesome </a>中查找</p>
 <p>还可以使用二级菜单。二级菜单在实现上可以理解为创建了一个软链接，到你指定的 page 上。</p>
-<h3>修改页脚</h3>
-
+<h3>
+修改页脚
+</h3>
 <p>页脚信息可能需要做定制化修改，修改的地方在主题文件的 /layout/_partial/footer.ejs 文件中，包括站点、使用的主题、访问量等。</p>
 <p>由于代码看不明白，找到了一个比较详细的<a target="_blank" rel="noopener" href="https://sunhwee.com/posts/6e8839eb.html">教程</a>。根据教程修改了版权信息，增加了网站运行时间，访问人数的代码目前不需要修改</p>
-<h3>代码高亮</h3>
-
+<h3>
+代码高亮
+</h3>
 <p>修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并将 prismjs.enable 的值设置为 true</p>
 <p>以上的设置并不管用，没有高亮也没有行号</p>
 <p>但是我下载了 hexo-prism-plugin 又卸载掉这个插件，就有高亮了，但依旧没有行号</p>
@@ -1017,11 +1035,13 @@ icon: fas fa-tags</code></pre>
     border-right: 0px solid #999;
 }</code></pre>
 <p>现在解决标号和 code 没对齐的问题，修改 prism.css 文件中 .line-numbers .line-numbers-rows 下 top 参数为 -0.2em，微调成功！治好了强迫症！</p>
-<h3>渲染表格</h3>
-
+<h3>
+渲染表格
+</h3>
 <p>hexo 对表格的渲染与 typora 是不一样的，正文和表格需要间隔两行。而且 hexo 并不会显示双括号，建议使用代码格式引用双括号。</p>
-<h2>配置 theme 中的 _config.yml</h2>
-
+<h2>
+配置 theme 中的 _config.yml
+</h2>
 <p>1.根据配置文件中的注释，简单修改了下面的设置</p>
 <p>dream, music, video, recommend, github &amp; social link, reward, clicklove, myProjects, mySkills, subtitle, banner</p>
 <p>2.取消 rainbow 特效</p>
@@ -1039,8 +1059,9 @@ icon: fas fa-tags</code></pre>
 <p>插件似乎并没受到影响。根据 <a target="_blank" rel="noopener" href="https://adaning.github.io/posts/33457.html">MathJax</a>常见问题 解决小括号无法显示问题。</p>
 <p>根据 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7ab21c7f0674">博客</a>再进一步配置 kramed 渲染，解决大括号的冲突问题。也遇到过本地 hexo s 能够渲染公式，但是 hexo d 部署后公式</p>
 <p>无法渲染的情况，根据<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846324/article/details/114582328">博客</a>中解决语义冲突解决问题。</p>
-<h2>配置 matery.css</h2>
-
+<h2>
+配置 matery.css
+</h2>
 <p>为了进一步设置我们的网页，让其更具有个性化，就需要进一步调整 matery.css 文件。</p>
 <p>1.设置 导航颜色</p>
 <pre><code>.bg-color {
@@ -1048,7 +1069,7 @@ icon: fas fa-tags</code></pre>
 }</code></pre>
 <p>查询颜色代码网址：<a target="_blank" rel="noopener" href="https://tool.oschina.net/commons?type=3">https://tool.oschina.net/commons?type=3</a></p>
 <p>2.由于刚开始加载时 banner 图片没有迅速加载，会默认先加载橙色，我改成灰色</p>
-<p>修改“\Hexo\themes\hexo-theme-matery\layout\ _partial\index-cover.ejs”文件中的第 63 行即可。</p>
+<p>修改“-theme-matery&nbsp;_partial-cover.ejs”文件中的第 63 行即可。</p>
 <pre><code>&lt;div class="carousel-item red white-text bg-cover about-cover"&gt;</code></pre>
 <p>把“red”修改为其他颜色即可。我改为 slate gray。</p>
 <p>3.改变 progress-bar 颜色。</p>
@@ -1057,10 +1078,12 @@ icon: fas fa-tags</code></pre>
 <p>6.修改了打字效果的颜色过后，我发现文章标题的颜色也跟着改了。解决方法是在下面的 .bg-cover .description 增加属性 color: #color_code，这样就能分别调整它们的颜色。</p>
 <p>7.修改 about 页面链接颜色 aboutme。</p>
 <p>8.修改 archive 页面时间线颜色 cd-timeline。</p>
-<h2>插件优化</h2>
-
-<h3>文章 url 优化</h3>
-
+<h2>
+插件优化
+</h2>
+<h3>
+文章 url 优化
+</h3>
 <p>我没有使用项目中主要介绍的转拼音方法，那样生成的链接太长了，而是使用 hexo-abbrlink 插件</p>
 <pre><code>npm install hexo-abbrlink --save</code></pre>
 <p>在根目录 _config.yml 文件中修改</p>
@@ -1071,15 +1094,19 @@ rep: hex     #进制： dec(default) and hex</code></pre>
 <p>在 hexo 三连时遇到报错</p>
 <pre><code>FATAL YAMLException: duplicated mapping key (111:1)</code></pre>
 <p>说明有原配置文件中已经有 permalink 的定义，我们需要把里本身的 permalink 代码注释掉，完美运行！现在我们的文章 url 最后是特殊的数字 id /archives/48732.html</p>
-<h3>文章字数统计插件</h3>
-
-<h3>添加 emoji 表情支持</h3>
-
-<h3>搜索</h3>
-
+<h3>
+文章字数统计插件
+</h3>
+<h3>
+添加 emoji 表情支持
+</h3>
+<h3>
+搜索
+</h3>
 <p>上面三个部分都是按照 hexo-thme-matery github 项目配置的</p>
-<h3>评论插件utterance</h3>
-
+<h3>
+评论插件utterance
+</h3>
 <p>matery 在配置文件中告诉我们，有的评论软件有安全隐患，推荐使用 utterance</p>
 <p>尝试 utterance，如果成功，则返回卸载 valine，注销 lean cloud</p>
 <p>也尝试了 livere 安装也很不友好</p>
@@ -1091,12 +1118,17 @@ theme="github-light"
 crossorigin="anonymous"
 async&gt;
 &lt;/script&gt;</code></pre>
-<p>我插入在 </p><div class="card"></div> 后面，是管用的。因为原项目说，插入到你的 layout 需要出现的地方，我不懂前端的代码，只能胡乱插入了，管用就行！我猜测这是一个“卡片类”能够存放你的内容，<p></p>
+我插入在
+<div class="card">
+
+</div>
+<p>后面，是管用的。因为原项目说，插入到你的 layout 需要出现的地方，我不懂前端的代码，只能胡乱插入了，管用就行！我猜测这是一个“卡片类”能够存放你的内容，</p>
 <p>以白色卡片在页面中展示出来。</p>
 <p>用同样的方法在 post 下添加评论。找到 /hexo-theme-matery/layout/_partial/post-detail.ejs 文件，找到评论的布局之处（搜索主题自带的评论插件如 gittalk，就能找到）插入上面的代码即可。</p>
 <p>但是渲染过后背景是透明的，不太好看，我希望想 contact 一样有白色背景，那就复制一下 contact.ejs 中的“卡片类”评论区就行了。</p>
-<h3>分类优化</h3>
-
+<h3>
+分类优化
+</h3>
 <p>matery 主题的分类没有多层分类，在 categories 页面只有像 tag 一样标签，这样的分类又有什么用呢？根据 <a>Hexo Matery 主题添加多级分类</a>进行设置，可以得到更好的分类页，类别之间将有层次关系</p>
 <p>具体来讲，采用了博客里最新更新的代码，又作了以下改动：</p>
 <p>1.给 category-item, category-count 等增加 color 属性，改为自己喜欢的颜色。</p>
@@ -1105,14 +1137,18 @@ async&gt;
 <pre><code>/* origin code: &lt;li  class="&lt;%= subCats.length &gt; 0 ? 'active' : '' %&gt;" &gt; */
 &lt;li  class="&lt;%= subCats.length &gt; 10000 ? 'active' : '' %&gt;" &gt;</code></pre>
 <p>4.删除箭头变化 category-item-action col s11 m11</p>
-<h2>TODO</h2>
-
-<h3>网站SEO优化</h3>
-
+<h2>
+TODO
+</h2>
+<h3>
+网站SEO优化
+</h3>
 <p>Search Engine Optimization</p>
 <p>将自己的网站提交给搜索引擎。</p>
-<h3>不断更新</h3>
-持续更新博客内容，完善分类。
+<h3>
+不断更新
+</h3>
+<p>持续更新博客内容，完善分类。</p>
 
                 
             </div>

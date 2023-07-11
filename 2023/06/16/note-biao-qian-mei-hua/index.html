@@ -5,12 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="关于hexo博客的note标签美化, 云袅小站">
-    <meta name="description" content="前言：为了美化hexo博客文章，所以加入note标签并加以美化。
+    <meta name="description" content="
+前言：为了美化hexo博客文章，所以加入note标签并加以美化。
+
 
 引入FontAwesome v4.7.0 版本的 CSS 文件
 
 &amp;lt;link type=&#39;text/css&#39; rel=&#34;stylesheet&#34;
-href=&#34;https">
+href=&#34;htt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -920,27 +922,31 @@ href=&#34;https">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div class="note info">前言：为了美化hexo博客文章，所以加入note标签并加以美化。</div>
-
-<h3>引入FontAwesome v4.7.0 版本的 CSS 文件</h3>
-
+                <div class="note info">
+前言：为了美化hexo博客文章，所以加入note标签并加以美化。
+</div>
+<h3>
+引入FontAwesome v4.7.0 版本的 CSS 文件
+</h3>
 <pre><code>&lt;link type='text/css' rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media='all'/&gt;</code></pre>
-<h3>添加一段自定义css代码</h3>
-        /* note 公共样式 */
-    .note {
-        position: relative;
-        padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: initial;
-        border-left: 3px solid #eee;
-        background-color: #f9f9f9;
-        border-radius: 3px;
-        font-size: var(--content-font-size);
-    }
+<h3>
+添加一段自定义css代码
+</h3>
+<pre><code>    /* note 公共样式 */
+.note {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: initial;
+    border-left: 3px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    font-size: var(--content-font-size);
+}
 
-<pre><code>.note:not(.no-icon):before {
+.note:not(.no-icon):before {
     position: absolute;
     font-family: FontAwesome;
     font-size: larger;
@@ -991,8 +997,9 @@ href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" 
     content: "\f056";
     color: #d9534f;
 }</code></pre>
-<h3>最后，在写 md 文件时以 html 标签方式引入即可</h3>
-
+<h3>
+最后，在写 md 文件时以 html 标签方式引入即可
+</h3>
 <p>注意：每个 div 标签结束后面必须空一行</p>
 <pre><code>&lt;div class="note info"&gt;这里是 info 标签样式&lt;/div&gt;
 
@@ -1009,21 +1016,30 @@ href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" 
 &lt;div class="note danger"&gt;这里是 danger 标签样式&lt;/div&gt;
 
 &lt;div class="note danger no-icon"&gt;这里是不带符号的 danger 标签样式&lt;/div&gt;</code></pre>
-<div class="note info">这里是 info 标签样式</div>
-
-<div class="note info no-icon">这里是不带符号的 info 标签样式</div>
-
-<div class="note primary">这里是 primary 标签样式</div>
-
-<div class="note primary no-icon">这里是不带符号的 primary 标签样式</div>
-
-<div class="note warning">这里是 warning 标签样式</div>
-
-<div class="note warning no-icon">这里是不带符号的 warning 标签样式</div>
-
-<div class="note danger">这里是 danger 标签样式</div>
-
-<div class="note danger no-icon">这里是不带符号的 danger 标签样式</div>
+<div class="note info">
+这里是 info 标签样式
+</div>
+<div class="note info no-icon">
+这里是不带符号的 info 标签样式
+</div>
+<div class="note primary">
+这里是 primary 标签样式
+</div>
+<div class="note primary no-icon">
+这里是不带符号的 primary 标签样式
+</div>
+<div class="note warning">
+这里是 warning 标签样式
+</div>
+<div class="note warning no-icon">
+这里是不带符号的 warning 标签样式
+</div>
+<div class="note danger">
+这里是 danger 标签样式
+</div>
+<div class="note danger no-icon">
+这里是不带符号的 danger 标签样式
+</div>
 
                 
             </div>
